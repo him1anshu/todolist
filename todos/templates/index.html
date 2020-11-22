@@ -1,0 +1,18 @@
+{% include 'partials/header.html' %}
+<div id="todo-list">
+  <ul>
+    <form action="{% url 'delete' %}" method="post">
+      {% csrf_token %}
+      {% for todo in todos %}
+      <li>
+        <input type="checkbox" name="Id" value="{{todo.id}}" id="{{todo.id}}"> <label for="{{todo.id}}"><a class="todo-title" href="/todos/details/{{todo.id}}">{{todo.title}}</a></label>
+      </li>
+      {% endfor %}
+   </ul>
+</div>
+        <input id="delete" type="submit" value="Delete" onclick="deletingTodo()" />
+     </form>
+{% include 'partials/footer.html' %}
+
+
+  <!-- <span class="todo-text">{{todo.text}}</span> -->
