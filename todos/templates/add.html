@@ -1,4 +1,5 @@
 {% include 'partials/header.html' %}
+{% include 'partials/content.html' %}
 <section id="add-todo">
   <form action="{% url 'add' %}" method="post">
     {% csrf_token %}

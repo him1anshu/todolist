@@ -1,0 +1,22 @@
+{% include 'partials/header.html' %}
+<section id="add-user">
+<h3>Register</h3>
+
+<form method="POST" action="">
+{% csrf_token %}
+<label for="username">Username</label>
+<span id="username">{{form.username}}</span>
+<label for="email">Email</label>
+<span id="email">{{form.email}}</span>
+<label for="password1">Password</label>
+<span id="password1">{{form.password1}}</span>
+<label for="password2">Confirm Password</label>
+<span id="password2">{{form.password2}}</span>
+<input type="submit" value="REGISTER" />
+</form>
+
+{{form.errors}}
+
+Already have an account? <a href="{% url 'login' %}">Login</a>
+</section>
+{% include 'partials/footer.html' %}

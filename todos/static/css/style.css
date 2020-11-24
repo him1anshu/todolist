@@ -16,12 +16,13 @@ body {
   position: absolute;
   height: 90vh;
   width: 90vh;
-  top: 50%;
+  top: 54%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   box-shadow:0 2rem 4rem rgba(0,0,0,0.2);
   border-radius: 4px;
+  z-index: -1;
 }
 
 #main-heading {
@@ -114,7 +115,7 @@ li {
   color: #55c57a;
 }
 
-#add-todo {
+#add-todo, #add-user {
   margin: 30px auto 0 auto;
   color: #00000A;
   border-radius: 5px;
@@ -123,11 +124,17 @@ li {
   width: 80%;
 }
 
+#add-user {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 label {
   text-transform: uppercase;
 }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], input[type=email], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -167,3 +174,8 @@ textarea {
   margin-top: 10px;
   width: 40%;
 }
+
+a, h3 {
+  text-transform: uppercase;
+}
+
